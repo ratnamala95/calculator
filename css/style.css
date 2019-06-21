@@ -2,9 +2,12 @@ body{
   background-color: #eaeaed;
 }
 
-.container{
+.contain{
+  margin:12%;
+  margin-left: 25%;
   width:50%;
   padding:5%;
+  /* border:1px solid black; */
 }
 
 .grid-container{
@@ -21,9 +24,26 @@ body{
   font-size: 30px;
   text-align: center;
 }
-@media screen and (max-width:480px){
-  .container{
-    width:90%;
-    margin-top: 20%;
-  }
+.btn{
+  width:80%;
 }
+.col{
+  padding:2% 0%;
+}
+.col-3{
+  padding:2% 0%;
+}
+.col-9{
+  padding:2% 0%;
+}
+
+#ipbox{
+  padding: 2% 0%;
+  width: 93%;
+}
+
+@media screen and (max-width:480px){
+  .contain{
+    width:90%;
+    margin: 5%;
+  }

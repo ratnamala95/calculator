@@ -1,5 +1,5 @@
 body{
-  background-color: #eaeaed;
+  background-color: ##eaeaed;
 }
 
 .contain{
@@ -7,7 +7,6 @@ body{
   margin-left: 25%;
   width:50%;
   padding:5%;
-  /* border:1px solid black; */
 }
 
 .grid-container{
@@ -37,9 +36,16 @@ body{
   padding:2% 0%;
 }
 
-#ipbox{
+
+#answer{
+  width: 225px;
+  display: inline-block;
+  font-family: verdana, sans-serif;
   padding: 2% 0%;
   width: 93%;
+  border:0.5px solid lightgray;
+  border-radius: 6px;
+  background: white;
 }
 
 @media screen and (max-width:480px){

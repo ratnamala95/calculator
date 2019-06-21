@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, intial-scale=1, shrink-to-fit">
-    <link rel="stylesheet" href="css/style.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Calculator</title>
     <style media="screen">
@@ -48,9 +48,20 @@
         padding:2% 0%;
       }
 
-      #ipbox{
+      /* #answer{
         padding: 2% 0%;
         width: 93%;
+      } */
+
+      #answer{
+        width: 225px;
+        display: inline-block;
+        font-family: 'Dosis', sans-serif;
+        padding: 2% 0%;
+        width: 93%;
+        border:0.5px solid lightgray;
+        border-radius: 6px;
+        background: white;
       }
 
       @media screen and (max-width:480px){
@@ -60,55 +71,43 @@
         }
 
     </style>
-    <script type="text/javascript">
-      var input = 0;
-      function disp(val){
-        document.getElementById("ipbox").value+=val;
-      }
-      function clr(){
-        document.getElementById("ipbox").value="";
-      }
-
-      function calci(){
-        input = document.getElementById("ipbox").value;
-        alert(input);
-      }
-
-    </script>
   </head>
-  <body onload="clr();">
+  <body onload="clearAll();">
     <div class="contain">
       <div class="row">
-        <div class="col-9"><input type="text" name="" value="" id="ipbox"></div>
+        <div class="col-9">
+        <!--<input type="text" name="" value="" id="answer"> -->
+        <span id="answer">0</span></div>
         <!-- <div class="col-3"><button type="button" name="" class="btn btn-info">2</button></div> -->
-        <div class="col-3"><button type="button" name="" class="btn btn-danger" onclick="clr()">C</button></div>
+        <div class="col-3"><button type="button" name="" class="btn btn-danger" onclick="clearAll()">C</button></div>
       </div>
       <div class="row">
-        <div class="col"><button type="button" name="" class="btn btn-info" value="1" onclick = "disp('1')">1</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info" value="2" onclick = "disp('2')">2</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info" value="3" onclick = "disp('3')">3</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info" value="+" onclick = "disp('+')">+</button></div>
+        <div class="col"><input type="button" name="" class="btn btn-info" value="1" onclick = "numericButton('1')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info" value="2" onclick = "numericButton('2')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info" value="3" onclick = "numericButton('3')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info" value="+" onclick = "operatorButton('+')"/></div>
       </div>
       <div class="row">
-        <div class="col"><button type="button" name="" class="btn btn-info" value="4" onclick = "disp('4')">4</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info" value="5" onclick = "disp('5')">5</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info" value="6" onclick = "disp('6')">6</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info" value="-" onclick = "disp('-')">-</button></div>
+        <div class="col"><input type="button" name="" class="btn btn-info" value="4" onclick = "numericButton('4')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info" value="5" onclick = "numericButton('5')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info" value="6" onclick = "numericButton('6')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info" value="-" onclick = "operatorButton('-')"/></div>
       </div>
       <div class="row">
-        <div class="col"><button type="button" name="" class="btn btn-info" value="7" onclick = "disp('7')">7</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info" value="8" onclick = "disp('8')">8</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info" value="9" onclick = "disp('9')">9</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info" value="*" onclick = "disp('*')">*</button></div>
+        <div class="col"><input type="button" name="" class="btn btn-info" value="7" onclick = "numericButton('7')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info" value="8" onclick = "numericButton('8')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info" value="9" onclick = "numericButton('9')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info" value="*" onclick = "operatorButton('*')"/></div>
       </div>
       <div class="row">
-        <div class="col"><button type="button" name="" class="btn btn-info" value="." onclick = "disp('.')">.</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info" value="0" onclick = "disp('0')">0</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-success" value="=" onclick = "calci()">=</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info" value="/" onclick = "disp('/')">/</button></div>
+        <div class="col"><input type="button" name="" class="btn btn-info" value="." onclick = "numericButton('.')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info" value="0" onclick = "numericButton('0')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-success" value="=" onclick = "calculateQueue(queue)" id="equals"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info" value="/" onclick = "operatorButton('/')"/></div>
       </div>
     </div>
 
+    <script type="text/javascript" src="js/calci.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

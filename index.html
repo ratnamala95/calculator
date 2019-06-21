@@ -60,37 +60,52 @@
         }
 
     </style>
+    <script type="text/javascript">
+      var input = 0;
+      function disp(val){
+        document.getElementById("ipbox").value+=val;
+      }
+      function clr(){
+        document.getElementById("ipbox").value="";
+      }
+
+      function calci(){
+        input = document.getElementById("ipbox").value;
+        alert(input);
+      }
+
+    </script>
   </head>
-  <body>
+  <body onload="clr();">
     <div class="contain">
       <div class="row">
         <div class="col-9"><input type="text" name="" value="" id="ipbox"></div>
         <!-- <div class="col-3"><button type="button" name="" class="btn btn-info">2</button></div> -->
-        <div class="col-3"><button type="button" name="" class="btn btn-danger">C</button></div>
+        <div class="col-3"><button type="button" name="" class="btn btn-danger" onclick="clr()">C</button></div>
       </div>
       <div class="row">
-        <div class="col"><button type="button" name="" class="btn btn-info">1</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info">2</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info">3</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info">+</button></div>
+        <div class="col"><button type="button" name="" class="btn btn-info" value="1" onclick = "disp('1')">1</button></div>
+        <div class="col"><button type="button" name="" class="btn btn-info" value="2" onclick = "disp('2')">2</button></div>
+        <div class="col"><button type="button" name="" class="btn btn-info" value="3" onclick = "disp('3')">3</button></div>
+        <div class="col"><button type="button" name="" class="btn btn-info" value="+" onclick = "disp('+')">+</button></div>
       </div>
       <div class="row">
-        <div class="col"><button type="button" name="" class="btn btn-info">4</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info">5</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info">6</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info">-</button></div>
+        <div class="col"><button type="button" name="" class="btn btn-info" value="4" onclick = "disp('4')">4</button></div>
+        <div class="col"><button type="button" name="" class="btn btn-info" value="5" onclick = "disp('5')">5</button></div>
+        <div class="col"><button type="button" name="" class="btn btn-info" value="6" onclick = "disp('6')">6</button></div>
+        <div class="col"><button type="button" name="" class="btn btn-info" value="-" onclick = "disp('-')">-</button></div>
       </div>
       <div class="row">
-        <div class="col"><button type="button" name="" class="btn btn-info">7</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info">8</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info">9</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info">*</button></div>
+        <div class="col"><button type="button" name="" class="btn btn-info" value="7" onclick = "disp('7')">7</button></div>
+        <div class="col"><button type="button" name="" class="btn btn-info" value="8" onclick = "disp('8')">8</button></div>
+        <div class="col"><button type="button" name="" class="btn btn-info" value="9" onclick = "disp('9')">9</button></div>
+        <div class="col"><button type="button" name="" class="btn btn-info" value="*" onclick = "disp('*')">*</button></div>
       </div>
       <div class="row">
-        <div class="col"><button type="button" name="" class="btn btn-info">.</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info">0</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info">=</button></div>
-        <div class="col"><button type="button" name="" class="btn btn-info">/</button></div>
+        <div class="col"><button type="button" name="" class="btn btn-info" value="." onclick = "disp('.')">.</button></div>
+        <div class="col"><button type="button" name="" class="btn btn-info" value="0" onclick = "disp('0')">0</button></div>
+        <div class="col"><button type="button" name="" class="btn btn-success" value="=" onclick = "calci()">=</button></div>
+        <div class="col"><button type="button" name="" class="btn btn-info" value="/" onclick = "disp('/')">/</button></div>
       </div>
     </div>
 

@@ -7,7 +7,6 @@ body{
   margin-left: 25%;
   width:50%;
   padding:5%;
-  /* border:1px solid black; */
 }
 .btn{
   width:80%;
@@ -21,11 +20,6 @@ body{
 .col-9{
   padding:2% 0%;
 }
-
-/* #answer{
-  padding: 2% 0%;
-  width: 93%;
-} */
 
 #answer{
   width: 225px;

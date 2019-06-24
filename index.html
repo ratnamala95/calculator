@@ -51,41 +51,42 @@
 
     </style>
   </head>
-  <body onload="clearAll();">
+  <body>
     <div class="contain">
       <div class="row">
         <div class="col-9">
         <span id="answer">0</span></div>
-        <div class="col-3"><button type="button" name="" class="btn btn-danger" onclick="clearAll()">C</button></div>
+        <div class="col-3"><button type="button" name="" id="clea" class="btn btn-danger">C</button></div>
       </div>
       <div class="row">
-        <div class="col"><input type="button" name="" class="btn btn-info" value="1" onclick = "numericButton('1')"/></div>
-        <div class="col"><input type="button" name="" class="btn btn-info" value="2" onclick = "numericButton('2')"/></div>
-        <div class="col"><input type="button" name="" class="btn btn-info" value="3" onclick = "numericButton('3')"/></div>
-        <div class="col"><input type="button" name="" class="btn btn-info" value="+" onclick = "operatorButton('+')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info"    value="1" onclick = "numberButton('1')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info"    value="2" onclick = "numberButton('2')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info"    value="3" onclick = "numberButton('3')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info"    value="+" onclick = "operatorButton('+')"/></div>
       </div>
       <div class="row">
-        <div class="col"><input type="button" name="" class="btn btn-info" value="4" onclick = "numericButton('4')"/></div>
-        <div class="col"><input type="button" name="" class="btn btn-info" value="5" onclick = "numericButton('5')"/></div>
-        <div class="col"><input type="button" name="" class="btn btn-info" value="6" onclick = "numericButton('6')"/></div>
-        <div class="col"><input type="button" name="" class="btn btn-info" value="-" onclick = "operatorButton('-')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info"    value="4" onclick = "numberButton('4')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info"    value="5" onclick = "numberButton('5')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info"    value="6" onclick = "numberButton('6')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info"    value="-" onclick = "operatorButton('-')"/></div>
       </div>
       <div class="row">
-        <div class="col"><input type="button" name="" class="btn btn-info" value="7" onclick = "numericButton('7')"/></div>
-        <div class="col"><input type="button" name="" class="btn btn-info" value="8" onclick = "numericButton('8')"/></div>
-        <div class="col"><input type="button" name="" class="btn btn-info" value="9" onclick = "numericButton('9')"/></div>
-        <div class="col"><input type="button" name="" class="btn btn-info" value="*" onclick = "operatorButton('*')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info"    value="7" onclick = "numberButton('7')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info"    value="8" onclick = "numberButton('8')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info"    value="9" onclick = "numberButton('9')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info"    value="*" onclick = "operatorButton('*')"/></div>
       </div>
       <div class="row">
-        <div class="col"><input type="button" name="" class="btn btn-info" value="." onclick = "numericButton('.')"/></div>
-        <div class="col"><input type="button" name="" class="btn btn-info" value="0" onclick = "numericButton('0')"/></div>
-        <div class="col"><input type="button" name="" class="btn btn-success" value="=" onclick = "calculateQueue(queue)" id="equals"/></div>
-        <div class="col"><input type="button" name="" class="btn btn-info" value="/" onclick = "operatorButton('/')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info"    value="." onclick = "numberButton('.')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info"    value="0" onclick = "numberButton('0')"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-success" value="=" onclick = "calculation(queue)" id="equals"/></div>
+        <div class="col"><input type="button" name="" class="btn btn-info"    value="/" onclick = "operatorButton('/')"/></div>
       </div>
     </div>
 
-    <script type="text/javascript" src="js/calci.js"></script>
+    <!-- <script type="text/javascript" src="js/calci.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/calc.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>

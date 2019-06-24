@@ -59,7 +59,8 @@ function numericButton(arg){
     if (!(arg === ".") || !input.match(/[.]/)) {
 
     input += arg;
-    document.getElementById("answer").innerHTML += arg;}
+    document.getElementById("answer").innerHTML += arg;
+  }
 
 
 }

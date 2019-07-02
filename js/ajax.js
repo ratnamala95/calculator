@@ -19,6 +19,7 @@ function showData(){
     url:'xml/nutrition.xml',
     dataType:'xml',
     cache:'false',
+    async:'false',
     error:function (e){
       alert('An error occured while reading xml file!');
       console.log('XML reading failed!',e);
@@ -103,7 +104,7 @@ function restaurantList(){
     cache:'false',
     error:function (e){
       alert('An error occured while reading xml file!');
-      console.log('XML reading failed!',e);
+      console.log(e);
     },
     success:function(response){
       console.log(response);

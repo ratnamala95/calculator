@@ -45,6 +45,10 @@ function showData(){
         $('ul').append('<li>'+protien+'</li>')
       });
 
+
+      // $('table').empty();
+      $('table').find('td').remove();
+
       $(response).find('food').each(function (){
 
         var name = $(this).find('name').text();
@@ -60,6 +64,7 @@ function showData(){
         var protein = $(this).find('protein').text();
         var vitamins = $(this).find('vitamins').text();
         var minerals = $(this).find('minerals').text();
+
 
         $('table').append('<tr><td>'+name+
         '</td><td>'+mfr+

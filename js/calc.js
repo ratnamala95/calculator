@@ -77,8 +77,73 @@ function addToQueue(arg){
   queue.push(arg);
 }
 
+/*test functions*/
+// var ar = ["Bilbo", "Gandalf", "Nazgul"];
+// ar.forEach((item, index, array) => {
+//   alert(`${item} is at index ${index} in ${array}`);
+// });
+
+// function compareNum(a,b){
+//   if(a>b)return 1;
+//   if(a==b)return 0;
+//   if(a<b)return -1;
+// }
+//
+let arr = [3,5,8,6,1,2];
+// let names = "ridhi,madhav,kannu";
+//
+// let users = [
+//   {age:22},
+//   {age:26},
+//   {age:32},
+// ];
+//
+// let user = {
+//   age:18,
+//   younger(otherUser){
+//     return otherUser.age<this.age;
+//   }
+// };
+//
+// younger = users.filter(user.younger,user);
+//
+// alert(younger.length);
+
+// alert(arr.reverse());
+// alert(arr.sort((a,b)=>a-b));
+// alert(names.split(','));
+// alert(arr.join(','));
+/*test functions end!*/
 
 
+// function camelize(str){
+//   return str
+//   .split('-')
+//   .map(
+//     (word,index)=>index==0?word:word[0].toUpperCase() + word.slice(1)
+//   )
+//   .join('');
+// }
+// alert(camelize("my-long-word"));
+
+// function filterRange(arr, a, b){
+//   return arr
+//   .filter(item => (a<=item && item<=b));
+// }
+// let filtered = filterRange(arr,6,9);
+
+function rangeFilter(arr,a,b){
+  for(i=0;i<arr.length;i++){
+    let val = arr[i];
+    //remove elements outside of interval instead of keeping the inside ones
+    if (val < a || val > b) {
+      i--;
+      arr.splice(i, 1);
+    }
+  }
+}
+rangeFilter(arr,1,5);
+alert(arr);
 /*Event Listeners*/
 
 document.getElementById("clea").addEventListener("click",clearAll);

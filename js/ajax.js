@@ -8,7 +8,7 @@ $(document).ready(() => {
     $('.btn').hide();
   });
 
-
+  restaurantList();
 });
 
 
@@ -95,16 +95,19 @@ function showData(){
 
 /* Seattle restaurants */
 function restaurantList(){
+
   $.ajax({
+    type:'GET',
     url:'xml/restaurants.xml',
     dataType:'xml',
     cache:'false',
-    error:function(e){
-      alert('Trouble reading XML file!');
-      console.log('problem reading xml document!',e);
+    error:function (e){
+      alert('An error occured while reading xml file!');
+      console.log('XML reading failed!',e);
     },
     success:function(response){
-      
+      console.log(response);
     }
+
   });
 }

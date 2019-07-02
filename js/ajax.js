@@ -108,6 +108,10 @@ function restaurantList(){
     },
     success:function(response){
       console.log(response);
+      $(response).find('restaurant').each(function(){
+        var name = $(this).find('name').text();
+        console.log(name);
+      });
     }
 
   });

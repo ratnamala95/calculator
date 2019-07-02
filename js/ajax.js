@@ -5,6 +5,7 @@ $(document).ready(() => {
     // alert('success!');
     $('table').show();
     showData();
+    $('.btn').hide();
   });
 
 
@@ -85,5 +86,25 @@ function showData(){
       // console.log(response);
     }
 
+  });
+}
+
+
+
+
+
+/* Seattle restaurants */
+function restaurantList(){
+  $.ajax({
+    url:'xml/restaurants.xml',
+    dataType:'xml',
+    cache:'false',
+    error:function(e){
+      alert('Trouble reading XML file!');
+      console.log('problem reading xml document!',e);
+    },
+    success:function(response){
+      
+    }
   });
 }

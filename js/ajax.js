@@ -1,14 +1,21 @@
 $(document).ready(() => {
 
   $('table').hide();
+
   $('.btn').on('click',() =>{
     // alert('success!');
-    $('table').show();
+    $('.food').show();
     showData();
     $('.btn').hide();
   });
 
-  restaurantList();
+  $('.res').on('click',() => {
+    $('.tab').show();
+    $('.res').hide();
+    restaurantList();
+
+  });
+
 });
 
 
@@ -56,7 +63,7 @@ function showData(){
         var name = $(this).find('name').text();
         var mfr = $(this).find('mfr').text();
         var serving = $(this).find('serving').text();
-        var calories = $(this).find('calories').text();
+        var calories = $(this).find('calories').attr('total');
         var totalfat = $(this).find('total-fat').text();
         var saturatedfat = $(this).find('saturated-fat').text();
         var cholesterol = $(this).find('cholesterol').text();
@@ -107,10 +114,21 @@ function restaurantList(){
       console.log(e);
     },
     success:function(response){
-      console.log(response);
+
+      $('.tab').find('td').remove();
+
       $(response).find('restaurant').each(function(){
-        var name = $(this).find('name').text();
-        console.log(name);
+        var resname = $(this).attr('name');
+        var address = $(this).attr('address');
+        var type = $(this).attr('type');
+
+        $('.tab').append('<tr><td>'+
+        resname+'</td><td>'+
+        address+'</td><td>'+
+        type+'</td></tr>');
+        console.log(resname);
+        console.log(address);
+        console.log(type);
       });
     }
 

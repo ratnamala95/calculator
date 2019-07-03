@@ -12,7 +12,6 @@ $(document).ready(() => {
     $('.res').hide();
     restaurantList();
   });
-
 });
 
 
@@ -101,6 +100,7 @@ function showData(){
 /* Seattle restaurants */
 function restaurantList(){
 
+  alert('yayy!');
   $.ajax({
     type:'GET',
     url:'xml/restaurants.xml',

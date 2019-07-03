@@ -3,17 +3,14 @@ $(document).ready(() => {
   $('table').hide();
 
   $('.btn').on('click',() =>{
-    // alert('success!');
     $('.food').show();
     showData();
     $('.btn').hide();
   });
-
-  $('.res').on('click',() => {
+  $('.res').on('click', () => {
     $('.tab').show();
     $('.res').hide();
     restaurantList();
-
   });
 
 });
@@ -56,7 +53,7 @@ function showData(){
 
 
       // $('table').empty();
-      $('table').find('td').remove();
+      $('.food').find('td').remove();
 
       $(response).find('food').each(function (){
 
@@ -75,7 +72,7 @@ function showData(){
         var minerals = $(this).find('minerals').text();
 
 
-        $('table').append('<tr><td>'+name+
+        $('.food').append('<tr><td>'+name+
         '</td><td>'+mfr+
         '</td><td>'+serving+
         '</td><td>'+calories+
@@ -120,15 +117,17 @@ function restaurantList(){
       $(response).find('restaurant').each(function(){
         var resname = $(this).attr('name');
         var address = $(this).attr('address');
+        var latitude = $(this).attr('lat');
+        var longitude = $(this).attr('lng');
         var type = $(this).attr('type');
 
         $('.tab').append('<tr><td>'+
-        resname+'</td><td>'+
-        address+'</td><td>'+
+        resname+"</td><td><a href = 'https://maps.google.com/?ll="+latitude+","+longitude+"'>"+
+        address+'</a></td><td>'+
         type+'</td></tr>');
-        console.log(resname);
-        console.log(address);
-        console.log(type);
+        // console.log(resname);
+        // console.log(address);
+        // console.log(type);
       });
     }
 

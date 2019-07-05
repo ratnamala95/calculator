@@ -75,7 +75,21 @@
               <button type="button" name="shut" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
+              <form action="#" method="post">
+                <div class="form-group">
+                  <label for="Email">Enter Email</label>
+                  <input type="email" name="email" class="form-control" placeholder="Enter email" aria-describedBy="emailHelp">
+                  <small id="emailHelp" class="form-text text-muted">your email will not be shared with anyone!</small>
+                </div>
+                <div class="form-group">
+                  <label for="Password">Enter Password</label>
+                  <input type="password" name="password" class="form-control" placeholder="Enter password">
+                </div>
 
+                <div class="form-group">
+                  <button type="submit" name="button" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" name="close" data-dismiss="modal">Close</button>

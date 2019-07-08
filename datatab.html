@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>datatable</title>
+    <link rel="stylesheet"String type="text/css"String href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"String>
+  </head>
+  <body>
+    <table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+      </table>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script type="text/javascript"String charset="utf8"String src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"String></script>
+      <script type="text/javascript">
+        $(document).ready(()=>{
+          $('#example').DataTable({
+            "serverSide":true,
+            "processing":true,
+            "ajax":"js/serverside.php"
+          });
+        });
+      </script>
+  </body>
+</html>
